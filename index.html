@@ -15,20 +15,14 @@
 </head>
 <body>
 
-  const exitFullscreens = [
-    "exitFullscreen",
-    "webkitExitFullscreen",
-    "mozCancelFullScreen",
-    "msExitFullscreen",
-];
+ <iframe id="sub" src="https://bing.com" onload="func1()"></iframe>
+  <script>
+    const sub = document.getElementById("sub");
 
-for (let i = 0; i < exitFullscreens.length; i++) {
-    if (document[exitFullscreens[i]]) {
-        document[exitFullscreens[i]]();
-        break;
+    function func1() {
+      sub.style.width = sub.contentWindow.document.body.scrollWidth + "px";
+      sub.style.height = sub.contentWindow.document.body.scrollHeight + "px";
     }
-}
-
-  <iframe src="https://bing.com" allowfullscreen/>
+    
 </body>
 </html>
