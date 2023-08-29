@@ -14,6 +14,20 @@
   <title>air pwa</title>
 </head>
 <body>
-<iframe src="https://bing.com" allowfullscreen/>
+const exitFullscreens = [
+    "exitFullscreen",
+    "webkitExitFullscreen",
+    "mozCancelFullScreen",
+    "msExitFullscreen",
+];
+
+for (let i = 0; i < exitFullscreens.length; i++) {
+    if (document[exitFullscreens[i]]) {
+        document[exitFullscreens[i]]();
+        break;
+    }
+}
+
+  <iframe src="https://bing.com" allowfullscreen/>
 </body>
 </html>
