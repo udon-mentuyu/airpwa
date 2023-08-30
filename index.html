@@ -17,7 +17,11 @@
 <body>
 <img src="air.png"widht=”50%”>
 <br>
-<iframe src="https://bing.com" width="1920" height="1080"></iframe>
-    
-</body>
-</html>
+<iframe id="sub" src="https://bing.com/"  scrolling="no"></iframe>
+<script>
+let iframe = document.getElementById("sub");
+window.addEventListener("load", function () {
+  iframe.style.width = iframe.contentWindow.document.body.scrollWidth + "px";
+  iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+});
+</script></body></html>
